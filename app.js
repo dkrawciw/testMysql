@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 var connection = mysql.createConnection({
-  host    : 'localhost',
+  host    : '127.0.0.1',
   user    : 'admin',
   password: '',
   database: 'test'
