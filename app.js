@@ -7,10 +7,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 var connection = mysql.createConnection({
-  host    : '127.0.0.1:3306',
+  host    : '127.0.0.1',
   user    : 'admin',
   password: '',
-  database: 'test'
+  database: 'test',
+  port    : '3306'
 });
 
 app.listen(80, function(){
