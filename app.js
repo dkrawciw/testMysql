@@ -21,7 +21,7 @@ app.get('/', function(){
     if(err){
       throw err;
     }
-    console.log('The solution is: ' results[0].solution);
+    console.log('The solution is: ' + results[0].solution);
   });
   res.render('index.html');
 });
