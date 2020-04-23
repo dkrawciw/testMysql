@@ -23,5 +23,5 @@ app.get('/', function(req, res){
     }
     console.log('The solution is: ' + results[0].solution);
   });
-  res.render('index.html');
+  res.render('index.ejs');
 });
