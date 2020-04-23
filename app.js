@@ -15,7 +15,7 @@ var connection = mysql.createConnection({
 app.listen(80, function(){
   console.log("app is up n' running");
 });
-app.get('/', function(){
+app.get('/', function(req, res){
   var q = 'SELECT 1 + 1 AS solution';
   connection.query(q, function(err, results, fields){
     if(err){
