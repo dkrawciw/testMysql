@@ -36,3 +36,8 @@ app.post('/delete/:itemId', function(req, res){
   connection.query('DELETE FROM checks WHERE id = ' + req.params.itemId + ';');
   res.redirect('/');
 })
+
+app.post('/deleteAll', function(req, res){
+  connection.query('DELETE FROM checks ;');
+  res.redirect('/');
+});

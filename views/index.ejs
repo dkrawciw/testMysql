@@ -14,12 +14,18 @@
       td{
         padding: 2%;
       }
+      #dltBtn{
+        margin: 1% auto;
+      }
     </style>
   </head>
   <body>
     <h2>Test</h2>
     <form action="/" method="POST">
       <button>Check</button>
+    </form>
+    <form action="deleteAll" method="POST">
+      <button id="dltBtn">Delete All</button>
     </form>
     <table>
       <% for(var x = results.length - 1; x >= 0; x--){ %>
