@@ -18,7 +18,7 @@ app.listen(80, function(){
   console.log("app is up n' running");
 });
 app.get('/', function(req, res){
-  var q = 'SELECT id, CONCAT(DAY(check_time),"/",MONTH(check_time),"/",YEAR(check_time)," @ ",HOUR(check_time),":",MINUTE(check_time)) FROM checks;';
+  var q = 'SELECT id, CONCAT(DAY(time_check),"/",MONTH(time_check),"/",YEAR(time_check)," @ ",HOUR(time_check),":",MINUTE(time_check)) FROM checks;';
   connection.query(q, function(err, results, fields){
     if(err){
       throw err;
