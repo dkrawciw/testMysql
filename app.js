@@ -31,3 +31,8 @@ app.post('/', function(req, res){
   connection.query('INSERT INTO checks() VALUES ();');
   res.redirect('/');
 });
+
+app.post('/delete/:itemId', function(req, res){
+  connection.query('DELETE FROM checks WHERE id = ' + req.params.itemId + ';');
+  res.redirect('/');
+})

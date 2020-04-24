@@ -26,6 +26,11 @@
         <tr>
           <td><%= results[x].id %></td>
           <td><%= results[x].time_check %></td>
+          <td>
+            <form action="/delete/<%= results[x].id %>" method="POST">
+              <button>Delete</button>
+            </form>
+          </td>
         </td>
       <% }; %>
     </table>
