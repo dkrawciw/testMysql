@@ -5,8 +5,16 @@
   </head>
   <body>
     <h2>Test</h2>
-    <button>Check</button>
-    <% %>
-    <% %>
+    <form action="/" method="POST">
+      <button>Check</button>
+    </form>
+    <table>
+      <% for(var x = results.length - 1; x >= 0; x--){ %>
+        <tr>
+          <td><%= results[x].id %></td>
+          <td><%= results[x].time_check %></td>
+        </td>
+      <% }; %>
+    </table>
   </body>
 </html>

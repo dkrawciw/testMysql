@@ -9,7 +9,7 @@ app.use(express.static("public"));
 var connection = mysql.createConnection({
   host    : '127.0.0.1',
   user    : 'root',
-  password: '',
+  password: 'password',
   database: 'test',
   port    : '3306'
 });
@@ -18,12 +18,16 @@ app.listen(80, function(){
   console.log("app is up n' running");
 });
 app.get('/', function(req, res){
-  var q = 'SELECT 1 + 1 AS solution';
+  var q = 'SELECT * FROM checks;';
   connection.query(q, function(err, results, fields){
     if(err){
       throw err;
     }
-    console.log('The solution is: ' + results[0].solution);
+    res.render('index.ejs', {results: results});
   });
-  res.render('index.ejs');
+});
+
+app.post('/', function(req, res){
+  connection.query('INSERT INTO checks() VALUES ();');
+  res.redirect('/');
 });
