@@ -25,6 +25,7 @@ app.get('/', function(req, res){
     }
     res.render('index.ejs', {results: results});
   });
+  connection.end();
 });
 
 app.post('/', function(req, res){
@@ -41,5 +42,3 @@ app.post('/deleteAll', function(req, res){
   connection.query('DELETE FROM checks ;');
   res.redirect('/');
 });
-
-connection.end();
