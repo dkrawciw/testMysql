@@ -22,10 +22,10 @@ app.get('/', function(req, res){
   connection.query(q, function(err, results, fields){
     if(err){
       throw err;
+      connection.end();
     }
     res.render('index.ejs', {results: results});
   });
-  connection.end();
 });
 
 app.post('/', function(req, res){
