@@ -41,3 +41,5 @@ app.post('/deleteAll', function(req, res){
   connection.query('DELETE FROM checks ;');
   res.redirect('/');
 });
+
+connection.end();
