@@ -1,0 +1,12 @@
+DROP DATABASE test;
+
+CREATE DATABASE test;
+
+USE test;
+
+CREATE TABLE checks
+(
+  id INT NOT NULL AUTO_INCREMENT,
+  time_check TIMESTAMP DEFAULT NOW(),
+  PRIMARY KEY(id)
+);
