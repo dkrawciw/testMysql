@@ -9,7 +9,7 @@ app.use(express.static("public"));
 var connection = mysql.createConnection({
   host    : '127.0.0.1',
   user    : 'root',
-  password: 'password',
+  password: 'xD#X3227l!7K&LW4k4av',
   database: 'test',
   port    : '3306'
 });
